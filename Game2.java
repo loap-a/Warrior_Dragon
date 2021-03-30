@@ -60,18 +60,22 @@ public class Game2 extends Game{
                 if(!hero_alive&&!dragon_alive)
                 {
                     System.out.println("英雄和恶龙同归于尽了");
-                    break;
+                    return;
+
                 }
                 if(!hero_alive)
                 {
                     System.out.println("英雄倒了");
-                    break;
+                    return;
                 }
                 System.out.println("英雄击败了恶龙");
 
-                break;
+                return;
             }
             my_hero.powerShiled_regenerate();
+
+            System.out.println("英雄剩余血量 : "+my_hero.getBlood()+"  英雄剩余护盾 : "+my_hero.getPowerShield());
+            System.out.println("暴龙剩余血量 "+my_dragon.getBlood());
         }
 
     }
